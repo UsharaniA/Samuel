@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Map</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Interactive Maps</h1>
+  </header>
+  <div id="map-container">
+    <img alt="Map" id="mapImage" style="display: none;">
+    
+    <!-- Static coordinates converted to percentages -->
+    <div class="coordinate path1" id="path1_1" style="top: 41.92%; left: 44.55%;" data-info="A man named Nahash the Ammonite had besieged the Israelite town of Jabesh-gilead, and before he would grant them a treaty, he required that he gouge out the right eye of every person in the town. 
+  ">1</div>
+    <div class="coordinate path1" id="path1_2" style="top: 65.78%; left: 35.38%;" data-info="Messanger comes to Gibeah and ask Saul to resuce them
+    ">2</div>
+    <div class="coordinate path1" id="path1_3" style="top: 43.14%; left: 38.51%;" data-info="When Saul heard what was happening, the Spirit of God came upon him powerfully, and he cut up his oxen and sent pieces throughout Israel as a threat to anyone who did not join him to rescue Jabesh-Gilead">3</div>
+    <div class="coordinate path1" id="path1_4" style="top: 66.46%; left: 41.74%;" data-info="Saul publically annoited as King">4</div>
+   <!-- Micmacsh -->
+    <!-- <div class="coordinate" id="m1" style="top: 66.46%; left: 41.74%;" data-info="Gilgal-Samuel instructed Saul to wait seven days for him to come and offer a sacrifice to seek God’s blessing for the troops but Samuel disobeyed.">1</div>
+    <div class="coordinate" id="m2" style="top: 66.46%; left: 41.74%;" data-info="The Philistines gather at Michmash with a massive army, and the Israelites are vastly outnumbered and poorly equipped (1 Samuel 13:5-7)">2</div>
+    <div class="coordinate" id="m3" style="top: 66.46%; left: 41.74%;" data-info="Saul followed Jonathan">3</div> -->
+    
+    <div class="coordinate path3" id="path3_1" style="top: 6.79%; left: 51.00%;" data-info="After David defeated Goliath and came to serve Saul at the royal court in Gibeah, Saul grew jealous of David’s success and eventually sought to kill him (1 Samuel 16-18), Psalm 8, 9, 11 Written">1</div>
+    
+    <div class="coordinate path3" id="path3_2" style="top: 1.93%; left: 61.21%;" data-info="David fled to the prophet Samuel at Ramah (1 Samuel 19). Psalm 59 Written">2</div>
+    
+    <div class="coordinate path3" id="path3_3" style="top: 7.92%; left: 59.83%;" data-info="Later David returned to Gibeah, and Jonathan warned him that Saul was determined to kill him (1 Samuel 20), Psalm 11 Written">3</div>
+    
+    <div class="coordinate path3" id="path3_4" style="top: 11.77%; left: 60.11%;" data-info="David rn to Nob to Ahimelek, the priest of Nob, David deceived Ahimelek, claiming he was on a secret mission from the king, David also requested Goliath weapon ,Doeg killed Ahimelek along with 85 other priests , Psalm 34 Written">4</div>
+    
+    <div class="coordinate path3" id="path3_5" style="top: 21.92%; left: 37.00%;" data-info="David then sought asylum in Gath and pretended to be insane to avoid suspicion from the king of Gath (1 Samuel 21:10-15). Psalm 56, 57 Written">5</div>
+    
+    <div class="coordinate path3" id="path3_6" style="top: 29.53%; left: 43.70%;" data-info="David later left Gath and lived in a cave at Adullam. There many family members and discontented people joined his small army (1 Samuel 22:1-2). Psalm 142 Written">6</div>
+    
+    <div class="coordinate path3" id="path3_7" style="top: 87.09%; left: 85.20%;" data-info="Then David took his parents to Moab, where he placed them in the care of the king of Moab (1 Samuel 22:3-4)">7</div>
+    
+    <div class="coordinate path3" id="path3_8" style="top: 63.83%; left: 63.88%;" data-info="After this David stayed for a while in The Stronghold, which may have been the fortress of Masada (1 Samuel 22:4). Psalm 18 Written">8</div>
+    
+    <div class="coordinate path3" id="path3_9" style="top: 29.31%; left: 58.59%;" data-info="The Lord told David to go to the Forest of Hereth, and the priest Abiathar(Son of Ahimelek) eventually joined him there (1 Samuel 22 4:5). Psalm 63 Written">9</div>
+    
+    <div class="coordinate path3" id="path3_10" style="top: 33.59%; left: 45.91%;" data-info="The Lord told David to rescue the town of Keilah (1 Samuel 23:1-12). Psalm 31 Written">10</div>
+    
+    <div class="coordinate path3" id="path3_11" style="top: 50.93%; left: 64.38%;" data-info="Later David stayed in various strongholds in the Wilderness of Ziph (1 Samuel 23:13-23). Psalm 54 Written">11</div>
+    
+    <div class="coordinate path3" id="path3_12" style="top: 71.20%; left: 55.63%;" data-info="While he was in the Wilderness of Maon, David narrowly escaped capture by Saul (1 Samuel 23:24-28; see also 1 Samuel 26:1-4), Psalm 63 Written">12</div>
+    
+    <div class="coordinate path3" id="path3_13" style="top: 52.21%; left: 67.56%;" data-info="David moved to the strongholds of En-gedi, where he spared Saul’s life (1 Samuel 23:29-24:22; see also 1 Samuel 26:5-25). Psalm 57 Written">13</div>
+    
+    <div class="coordinate path3" id="path3_14" style="top: 65.69%; left: 64.94%;" data-info="David went back to The Stronghold (1 Samuel 24:23). Psalm 54 Written">14</div>
+    
+    <div class="coordinate path3" id="path3_15" style="top: 70.40%; left: 57.35%;" data-info="Then to the Wilderness of Maon, where he married a woman named Abigail (1 Samuel 25:1-44). Psalm 63 Written">15</div>
+    
+    <div class="coordinate path3" id="path3_16" style="top: 22.90%; left: 38.47%;" data-info="Eventually David returned to Gath (1 Samuel 27). Psalm 34 Written">16</div>
+    
+    <div id="mover" style="display: none;"></div>  
+  </div>
+<!-- Hidden input field to store the selected path -->
+<input type="hidden" id="pathName" name="pathName" value="">
+
+<button id="next-button" style="display: none;">Click to Folow the Journey</button>
+  <!-- Hyperlinks to trigger the movement -->
+   <!-- Hyperlinks to trigger the movement -->
+   <div id="path-container">
+    <a href="#" id="path1">Saul Rescues Jabesh-Gilead</a>
+    <a href="#" id="path2">Battle at Michmash</a>
+    <a href="#" id="path3">David Flight</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

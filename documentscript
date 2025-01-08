@@ -1,0 +1,22 @@
+const mapImage = document.getElementById('mapImage');
+
+if (mapImage) {
+  console.log('Map image found!');
+  
+  mapImage.addEventListener('click', function(event) {
+    const rect = mapImage.getBoundingClientRect();
+
+    // Calculate the position of the mouse relative to the image
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    // Calculate percentage positions
+    const xPercent = ((x / rect.width) * 100).toFixed(2);
+    const yPercent = ((y / rect.height) * 100).toFixed(2);
+
+    // Log the percentage position
+    console.log(`Clicked position: top: ${yPercent}%; left: ${xPercent}%`);
+  });
+} else {
+  console.log("Map image not found.");
+}
